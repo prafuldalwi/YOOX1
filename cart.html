@@ -1,0 +1,500 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    #navbar {
+
+      height: 120px;
+      width: 100%;
+      background-color:hwb(0 94% 4%) ;
+
+
+
+      /* background-color: white; */
+      /* position: fixed;
+           margin: auto;
+           background-color: white; */
+
+
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+      font-family: 'cormorant garamond', serif;
+    }
+
+   
+     .section {
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .section2 {
+
+      height: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-left: 11%;
+      padding-right: 11%;
+    }
+
+    .search-container button {
+
+      background-color: white;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    .search-container>a {
+      margin-left: 50px;
+      font-size: 25px;
+
+    }
+
+    i {
+      font-size: 20px;
+    }
+
+    .section2>div>a {
+      padding: 10px;
+
+
+    }
+
+    .section2>div:first-child>a:hover {
+      background-color: #f2f2f6;
+    }
+
+    .login>a {
+      margin-left: 1000px;
+    }
+
+    .page>select {
+      border: none;
+      text-align: center;
+
+      cursor: pointer;
+
+    }
+
+  
+    #select {
+      text-decoration: underline;
+
+    }
+
+    
+    #select:hover {
+      text-decoration: none;
+
+    }
+
+    .last_bar>a {
+      color: white;
+      height: 29px;
+      justify-content: space-evenly;
+      margin-left: 25px;
+      font-weight: lighter;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .last_bar>a:hover {
+      color: #76767b;
+    }
+
+    .last_bar {
+      border: 1px solid black;
+
+      background-color: black;
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+
+
+
+    }
+
+    img {
+      width: 100px;
+      padding-bottom: 20px;
+    }
+
+    .login>button {
+      border: none;
+      margin-left: 13px;
+
+    }
+
+    .login>button:hover {
+      background-color: #e6e6f7;
+      cursor: pointer;
+    }
+
+    /* payments */
+    #pay {
+      /* border: 1px solid red; */
+      height: 70px;
+      width: 70%;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    #pay>#paypal {
+      /* border: 1px solid red; */
+      /* margin:auto; */
+      width: 40%;
+      height: 40px;
+    }
+
+    #pay>#paypal:nth-child(1) {
+      padding: 20px;
+
+    }
+
+    #pay>#paypal:nth-child(2) {
+      background-color: #ffc439;
+      padding: 20px;
+      width: 30%;
+      height: 20px;
+      gap: 20px;
+    }
+
+    #pay>#paypal:nth-child(2)>p {
+      /* position: absolute; */
+      margin-top: -48px;
+      margin-left: 120px;
+    }
+
+    #pay>#paypal:nth-child(3)>a>h3 {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      height: 20px;
+
+    }
+
+    #item {
+      width: 70%;
+      height: 170px;
+      /* border: 1px solid red; */
+      margin: auto;
+      margin-top: 5px;
+      background-color:hwb(0 95% 3%) ;
+   
+    }
+
+    #item>#item1>#tshirt {
+      margin-top: -130px;
+      margin-left: 100px;
+    }
+
+    #itemadd {
+      margin-left: 600px;
+      margin-top: -30px;
+      color: grey;
+    }
+
+    #itemadd input {
+      border-radius: 50%;
+      width: 100px;
+      height: 34px;
+     
+    }
+
+    #itemam {
+      margin-left: 750px;
+      margin-top: -50px;
+    }
+    #check{
+      width: 63%;
+      height: -60px;
+      /* border: 1px solid red; */
+      margin: auto;
+      margin-top: 5px;
+      background-color:hwb(0 95% 3%) ;
+      padding: 50px;
+    }
+    #free{
+       text-align: center;
+      margin: auto;
+      margin-top: 18px;
+      height: 40px;
+      width: 70%;
+      background-color: rgba(250, 250, 84, 0.938);
+      padding-top: 16px;
+    }
+    #checkout{
+      border: 1px solid red;
+      width: 70%;
+      margin: auto;
+      height: 200px;
+    }
+    #ecobox{
+      border: 1px solid green;
+      width: 35%;
+      margin-left: 18%;
+      height: 100px;
+    }
+    #code{
+      width: 70%;
+      height: 60px;
+      margin: auto;
+      margin-top: 15px;
+      /* background-color:hwb(0 95% 3%) ; */
+      display: flex;
+      justify-content: space-between;
+      background-color:hwb(0 95% 3%) ;
+    }
+   #total{
+    width: 70%;
+      height: 200px;
+      margin: auto;
+      margin-top: 15px;
+      justify-content: space-between;
+   }
+  #yoox{
+    width: 95%;
+      height: 60px;
+      margin: auto;
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  #yoox>h5{
+      margin-top: 20px;
+  }
+  #order{
+    width: 70%;
+      height: 60px;
+      margin: auto;
+      margin-top: 30px;
+      /* background-color:hwb(0 95% 3%) ; */
+      display: flex;
+      justify-content: space-between;
+      background-color:hwb(0 95% 3%) ;
+  }
+  #care{
+        width:70%;
+        margin: auto;
+        margin-top: 10%;
+  }
+  #footer{
+    border: 1px solid red;
+    width:100%;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    height: 180px;
+  }
+ #foot{
+    margin-top: 6%;
+    color: white;
+    text-align: center;
+
+ }
+  </style>
+
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="section">
+      <div class="page">
+        <select style="margin-left: -4 00px;" name="India" id="select">
+          <option value="india">India</option>
+          <option value="Albenia">Albenia</option>
+          <option value="Aergentina">Aergentina</option>
+          <option value="Australia">Australia</option>
+          <option value="Colabmia">Colabmia</option>
+          <option value="Egypt">Egypt</option>
+        </select>
+        <a href="customercare">CUSTOMER CARE</a>
+
+      </div>
+      <div class="login">
+        <a href="./ragister.html"><button><i class="fa fa-pencil"></i> Register or login</button></a>
+        <!-- <a href="rigister"><i class="fa fa-pencil"></i> REGISTER</a> -->
+        <!-- <a href="login"> <i class="fa fa-lock"></i>  LOGIN</a> -->
+        <!-- <a href="./ragister.html"><button><i class="fa fa-lock"></i> LOGIN</button></a> -->
+      </div>
+
+    </div>
+    <div class="section2">
+      <div>
+        <a href="./womens.html">WOMENS</a>
+        <a href="./mens.html">MENS</a>
+        <a href="./kids.html">KIDS</a>
+        <a href="./Design.html">DISIGN+ART</a>
+      </div>
+      <a href="./homepage.html"><img src="https://www.yoox.com/media/yoox16/header/yoox-logo-p.svg" alt=""></a>
+      <div class="search-container">
+        <!-- <form action="/action_page.php">
+                 <input type="text" placeholder="Search.." name="search"> -->
+        <!-- <button type="submit"><i class="fa fa-search" style="font-size: 25px;"></i></button> -->
+        <a href="search"><i class="fa fa-search"></i></a>
+        <a href="wishlist"><i class="fa fa-heart-o"></i></a>
+        <a href="bag"><i class="fa fa-shopping-bag"></i></a>
+        <!-- </form> -->
+
+      </div>
+
+
+    </div>
+  </div>
+  <div>
+    <h2 style="text-align: center;  background-color:hwb(0 94% 4%) ;">SHOPPING BAG</h2>
+  </div>
+  <div id="pay">
+    <div id="paypal">
+      <a href="homepage.html"></a>
+      <h4>BACK TO SHOPPING</h4>
+    </div>
+    <div id="paypal">
+      <a href=""><img src="https://www.yoox.com/media/yoox16/logos/paypal_logo_txt.png?v=1" alt="pay"></a>
+      <P>CHECK OUT</P>
+    </div>
+    <div id="paypal">
+      <a href="./payment.html">
+        <h3> PROCEED WITH YOUR ORDER > </h3>
+      </a>
+    </div>
+  </div>
+  <div id="item">
+    <h2> 1 | ITEMS ADDED TO YOUR SHOPPING BAG (1)</h2>
+    <div id="item1">
+      <img
+        src="https://www.yoox.com/images/items/14/14223307px_14_f.jpg?width=63&height=80&impolicy=crop&gravity=Center"
+        alt="img">
+      <div id="tshirt">
+        <h5>VALENTINO</h5>
+        <P style="color:#76767b">Sweaters</P>
+        <h5>LAST ONE AVAILABLE</h5>
+      </div>
+    </div>
+    <div id="item1">
+      <p style="margin-top: -30px; margin-left: 300px; color:#76767b">Azure</p>
+    </div>
+    <div id="item1">
+      <h5 style="margin-top: -20px; margin-left: 400px; color:#76767b">M (International Size)</h5>
+    </div>
+    <div id="itemadd">
+      <input type="number">
+
+    </div>
+    <h4 style="  margin-left: 618px;"> X Remove</h4>
+    <div id="itemam"> <span class="pre"><del>$ 2051.00</del></span>
+      <span class="pro">63% OFF</span>
+      </h4>
+      <h4>$1024.00</h4>
+    </div>
+  </div>
+    <!-- <label class="container"> -->
+      <div id="check">
+  <input type="checkbox">     
+  BUYING A GIFT
+  <span class="checkmark"></span>
+  </div>
+
+  <div id="free">
+    <h3>FREE STANDARD SHIPPING ON ORDERS OVER $100</h3>
+  </div>
+ <h2 style="margin-top: 18px; width: 70%; margin: auto; padding: 20px;">2  |   SELECT SHIPPING METHOD</h2>
+  <di id="method">
+      <div  style="background-color: white;" id="check">
+        <input type="checkbox">     
+        STANDARD -$ 9.95 FREE
+        <p>12-15 business days</p>
+        <p>6 times less CO2 emissions than Express shipping</p>
+        <span class="checkmark"></span>
+        </div>
+    
+        <div  style="background-color: white;" id="check">
+          <input type="checkbox">     
+          EXPRESS - $ 19.95
+          <p>2-4 business days</p>
+          <p>Most products ship from our warehouse in Italy. Due to the time difference between North America and Europe, delivery time will start one business day after your order is placed.<br><b> Click here to see the days on which we do not ship.</b></p>
+          <span class="checkmark"></span>
+          </div>
+
+          <div id="ecobox">
+             <h4 style="color: green">ECOBOX</h4>
+             <P style="margin-top: 12px; width: 70%; font-size: small;" >YOOX’s packaging is made entirely from recyclable materials and is internationally certified by RESY, FSC, PEFC and SFI for environmental, social and economic sustainability.</P>
+          </div>
+      
+          <div id="code">
+            <div >
+              <h3 style="padding: 20px;" >YOOXCODE</h3>
+            </div>
+            <div style="padding: 20px;" >Use your personal YOOXCODE to access exclusive promotions</div>
+            <div style="padding: 20px;" >ENTER YOUR CODE  +</div>
+          </div>
+     <div id="total">
+        <div id = "yoox">
+            <h5>TOTAL FOR ITEMS</h5>
+            <h5>$1,024.00</h5>
+        </div>
+        <div id = "yoox">
+            <h5>SHIPPING</h5>
+            <h5>Free</h5>
+        </div>
+        <p >(The final amount will depend on the shipping method you choose)</p>
+        <div id = "yoox">
+            <h5>PAYMENT</h5>
+            <h5>Free</h5>
+        </div>
+        <hr>
+    </div>
+    <div id="order">
+         <h3 style="margin-top: 20px;">ORDER TOTAL</h3>
+         <h3 style="margin-top: 20px;">$ 1,024.00</h3>
+        </div>
+        <hr style="width:70%;margin:auto;">
+        <div id="pay">
+            <div id="paypal">
+              <a href="homepage.html"></a>
+              <h4>BACK TO SHOPPING</h4>
+            </div>
+            <div id="paypal">
+              <a href=""><img src="https://www.yoox.com/media/yoox16/logos/paypal_logo_txt.png?v=1" alt="pay"></a>
+              <P>CHECK OUT</P>
+            </div>
+            <div id="paypal">
+              <a href="./payment.html">
+                <h3> PROCEED WITH YOUR ORDER > </h3>
+              </a>
+            </div>
+          </div>
+          <div id="care">
+            <h4>CUSTOMER CARE</h4>
+            <P style="margin-top: 9px;">If you have any questions call us at our toll-free number 90118698061 (Mon-Fri, 9am to 11pm EST)</P>
+          </div>
+          <div id="footer">
+            <div id="foot">
+                <p>POWERED BY YOOX NET-A-PORTER GROUP - COPYRIGHT © 2000-2022 YOOX NET-A-PORTER GROUP S.P.A. - ALL RIGHTS RESERVED - SIAE LICENCE # 401/I/526</p>
+                <p>LEGAL AREA / PRIVACY POLICY</p>
+            </div>
+          </div>
+</body>
+
+</html>
